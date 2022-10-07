@@ -115,7 +115,7 @@ section .title::after{
 }
 .navbar .menu li a{
     display: block;
-    color: #fff;
+    color: gold;
     font-size: 18px;
     font-weight: 500;
     margin-left: 25px;
@@ -139,35 +139,36 @@ section .title::after{
     position: fixed;
     height: 45px;
     width: 42px;
-    background: crimson;
+    background: red;
     right: 30px;
     bottom: 10px;
     text-align: center;
     line-height: 45px;
-    color: #fff;
+    color: white;
     z-index: 9999;
     font-size: 30px;
     border-radius: 6px;
     border-bottom-width: 2px;
     cursor: pointer;
-    opacity: 0;
+    opacity: 10;
     pointer-events: none;
     transition: all 0.3s ease;
 }
 .scroll-up-btn.show{
     bottom: 30px;
-    opacity: 1;
+    opacity: 10;
     pointer-events: auto;
 }
 .scroll-up-btn:hover{
     filter: brightness(90%);
+    color: gold;
 }
 
 
 /* home section styling */
 .home{
     display: flex;
-    background: url("images/maurel4.jpg") no-repeat center;
+    background: url("images/photolab_m.jpg") no-repeat center;
     height: 100vh;
     color: #fff;
     background-color: #111;
@@ -175,7 +176,7 @@ section .title::after{
     background-size: 45em;
     background-position-y: -2em;
     background-attachment: fixed;
-    font-family: 'Ubuntu', sans-serif;
+    font-family: 'ubuntu', sans-serif;
 }
 .home .max-width{
   width: 100%;
@@ -208,7 +209,7 @@ section .title::after{
     padding: 12px 36px;
     margin-top: 20px;
     font-weight: 400;
-    border-radius: 6px;
+    border-radius: 60px;
     border: 2px solid crimson;
     transition: all 0.3s ease;
 }
@@ -220,8 +221,34 @@ section .title::after{
 /* about section styling */
 .about .title::after{
     content: "Qui suis-je?";
-
+    font-family: 'Ubuntu';
+    -webkit-animation: rotate-center 0.6s ease-in-out both;
+	animation: rotate-center 0.6s ease-in-out both;
+    
 }
+
+ @-webkit-keyframes about-content {
+    0% {
+      -webkit-transform: rotate(0);
+              transform: rotate(0);
+    }
+    100% {
+      -webkit-transform: rotate(360deg);
+              transform: rotate(360deg);
+    }
+  }
+  @keyframes about-content {
+    0% {
+      -webkit-transform: rotate(0);
+              transform: rotate(0);
+    }
+    100% {
+      -webkit-transform: rotate(360deg);
+              transform: rotate(360deg);
+    }
+  }
+  
+
 .about .about-content .left{
     width: 45%;
 }
@@ -274,7 +301,7 @@ section .title::after{
 .services .title::after,
 .teams .title::after{
     background: #111;
-    content: "Ce que je peux faire😎";
+    content: "Ce dont je suis capable";
 }
 .services .serv-content .card{
     width: calc(33% - 20px);
@@ -311,7 +338,7 @@ section .title::after{
 /* skills section styling */
 
 .skills .title::after{
-    content: "what i know";
+    content: "MY SKILLS || MES CONNAISSANCES";
 }
 .skills .skills-content .column{
     width: calc(50% - 30px);
@@ -385,7 +412,7 @@ section .title::after{
 
 /* teams section styling */
 .teams .title::after{
-    content: "Avec qui je collabore???";
+    content: "Mes collaborateurs";
 }
 .teams .carousel .card{
     background: #222;
